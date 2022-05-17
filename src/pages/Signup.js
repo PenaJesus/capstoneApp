@@ -16,7 +16,7 @@ export default function Signup() {
   });
 
 const onSubmit = (data) => {
-  axios.post("http://localhost:3000/auth", data).then(()=> {
+  axios.post("https://jp-blog-app.herokuapp.com/auth", data).then(()=> {
     console.log(data);
   })
 }

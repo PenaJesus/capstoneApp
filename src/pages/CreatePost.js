@@ -28,7 +28,7 @@ export default function CreatePost() {
 
   const onSubmit = (data) => {
     axios
-      .post("http://localhost:3000/posts", data, {
+      .post("https://jp-blog-app.herokuapp.com/posts", data, {
         headers: { accessToken: localStorage.getItem("accessToken") },
       })
       .then((response) => {

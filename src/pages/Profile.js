@@ -9,11 +9,11 @@ function Profile() {
   const [listOfPosts, setListOfPosts] = useState([]);
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/auth/basicinfo/${id}`).then((response) => {
+    axios.get(`https://jp-blog-app.herokuapp.com/auth/basicinfo/${id}`).then((response) => {
       setUsername(response.data.username);
     });
 
-    axios.get(`http://localhost:3000/posts/byuserId/${id}`).then((response) => {
+    axios.get(`https://jp-blog-app.herokuapp.com/posts/byuserId/${id}`).then((response) => {
       setListOfPosts(response.data);
     });
   }, []);

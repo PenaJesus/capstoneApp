@@ -16,7 +16,7 @@ function Home() {
       history.push("/login");
     } else {
       axios
-        .get("http://localhost:3000/posts", {
+        .get("https://jp-blog-app.herokuapp.com/posts", {
           headers: { accessToken: localStorage.getItem("accessToken") },
         })
         .then((response) => {
@@ -33,7 +33,7 @@ function Home() {
   const likeAPost = (postId) => {
     axios
       .post(
-        "http://localhost:3000/likes",
+        "https://jp-blog-app.herokuapp.com/likes",
         { PostId: postId },
         { headers: { accessToken: localStorage.getItem("accessToken") } }
       )
